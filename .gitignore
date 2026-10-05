@@ -1,0 +1,15 @@
+# Dependencias
+expresofast-frontend/node_modules/
+
+# Cachés y compilaciones
+expresofast-frontend/.angular/cache/
+expresofast-frontend/dist/
+expresofast-frontend/coverage/
+expresofast-backend/target/
+
+# Archivos locales del sistema y editores
+.DS_Store
+Thumbs.db
+*.log
+expresofast-frontend/.vscode/
+expresofast-backend/.vscode/

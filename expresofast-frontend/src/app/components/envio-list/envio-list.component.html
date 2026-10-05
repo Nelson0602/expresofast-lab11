@@ -1,0 +1,56 @@
+<h2>Dashboard de envíos</h2>
+
+@if (successMessage) {
+<p class="message success">{{ successMessage }}</p>
+}
+
+@if (errorMessage) {
+<p class="message error">{{ errorMessage }}</p>
+}
+
+@if (loading) {
+<p>Cargando envíos...</p>
+} @else if (shipments.length === 0 && !errorMessage) {
+<p>Todavía no hay envíos registrados.</p>
+} @else if (shipments.length > 0) {
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Destinatario</th>
+                <th>Dirección</th>
+                <th>Flete</th>
+                <th>Despacho</th>
+                <th>Entrega estimada</th>
+                <th>Paquetes</th>
+                <th>Estado</th>
+                <th>Cambiar estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (shipment of shipments; track shipment.id) {
+            <tr>
+                <td>{{ shipment.codigoRastreo }}</td>
+                <td>{{ shipment.destinatario }}</td>
+                <td>{{ shipment.direccionDestino }}</td>
+                <td>{{ shipment.montoFlete | number:'1.2-2' }}</td>
+                <td>{{ shipment.fechaDespacho | date:'dd/MM/yyyy' }}</td>
+                <td>{{ shipment.fechaEntregaEstimada | date:'dd/MM/yyyy' }}</td>
+                <td>{{ shipment.paquetes.length }}</td>
+                <td>
+                    <span class="badge" [ngClass]="shipment.estado">{{ shipment.estado }}</span>
+                </td>
+                <td>
+                    <select [ngModel]="shipment.estado" (ngModelChange)="changeStatus(shipment, $event)">
+                        @for (state of states; track state) {
+                        <option [value]="state">{{ state }}</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

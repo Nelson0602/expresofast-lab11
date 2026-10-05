@@ -1,0 +1,74 @@
+h2 {
+    color: #12355b;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e4e9f0;
+}
+
+th {
+    background: #eaf0f8;
+    color: #12355b;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.badge.PENDIENTE {
+    background: #e0a800;
+    color: #1f2933;
+}
+
+.badge.EN_TRANSITO {
+    background: #1f6fd1;
+}
+
+.badge.ENTREGADO {
+    background: #2e9d4f;
+}
+
+.badge.CANCELADO {
+    background: #d1382f;
+}
+
+select {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #b8c4d3;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+.message.success {
+    background: #dff3e5;
+    color: #1d6b39;
+}
+
+.message.error {
+    background: #fbe0de;
+    color: #9a2119;
+}

@@ -1,0 +1,107 @@
+h2 {
+    color: #12355b;
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+    max-width: 460px;
+    margin-bottom: 16px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 9px 10px;
+    border: 1px solid #b8c4d3;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #1f6fd1;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.card {
+    max-width: 560px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+dt {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #4a5b6d;
+}
+
+dd {
+    margin: 2px 0 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.badge.PENDIENTE {
+    background: #e0a800;
+    color: #1f2933;
+}
+
+.badge.EN_TRANSITO {
+    background: #1f6fd1;
+}
+
+.badge.ENTREGADO {
+    background: #2e9d4f;
+}
+
+.badge.CANCELADO {
+    background: #d1382f;
+}
+
+.progress {
+    height: 14px;
+    margin-top: 20px;
+    background: #e4e9f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2e9d4f;
+    transition: width 0.4s;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 8px 0 0;
+    list-style: none;
+    color: #8a97a6;
+    font-size: 0.85rem;
+}
+
+.steps li.done {
+    color: #1d6b39;
+    font-weight: 700;
+}
+
+.message.error {
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #fbe0de;
+    color: #9a2119;
+}

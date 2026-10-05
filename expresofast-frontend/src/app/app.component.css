@@ -1,0 +1,44 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 28px;
+    background: #12355b;
+    color: #ffffff;
+}
+
+.brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    color: #dbe7f5;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: #1d4d82;
+}
+
+nav a.active {
+    background: #ffffff;
+    color: #12355b;
+    font-weight: 600;
+}
+
+.page {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 16px;
+}

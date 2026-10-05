@@ -1,0 +1,50 @@
+<h2>Rastrear guía</h2>
+
+<form class="search-box" (ngSubmit)="search()">
+    <input name="trackingCode" type="text" placeholder="Ejemplo: EXP-2026-1001" [(ngModel)]="trackingCode" />
+    <button type="submit" [disabled]="loading">Buscar</button>
+</form>
+
+@if (loading) {
+<p>Buscando envío...</p>
+}
+
+@if (errorMessage) {
+<p class="message error">{{ errorMessage }}</p>
+}
+
+@if (shipment) {
+<section class="card">
+    <h3>{{ shipment.codigoRastreo }}</h3>
+
+    <dl>
+        <dt>Destinatario</dt>
+        <dd>{{ shipment.destinatario }}</dd>
+
+        <dt>Dirección de destino</dt>
+        <dd>{{ shipment.direccionDestino }}</dd>
+
+        <dt>Monto del flete</dt>
+        <dd>{{ shipment.montoFlete | number:'1.2-2' }}</dd>
+
+        <dt>Fecha de creación</dt>
+        <dd>{{ shipment.fechaCreacion | date:'dd/MM/yyyy HH:mm' }}</dd>
+
+        <dt>Estado actual</dt>
+        <dd><span class="badge" [ngClass]="shipment.estado">{{ shipment.estado }}</span></dd>
+    </dl>
+
+    @if (shipment.estado === 'CANCELADO') {
+    <p class="message error">Este envío fue cancelado.</p>
+    } @else {
+    <div class="progress" aria-label="Progreso del envío">
+        <div class="progress-fill" [style.width.%]="getProgress()"></div>
+    </div>
+    <ul class="steps">
+        @for (step of steps; track step) {
+        <li [class.done]="isStepDone(step)">{{ step }}</li>
+        }
+    </ul>
+    }
+</section>
+}

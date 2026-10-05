@@ -1,0 +1,118 @@
+h2 {
+    color: #12355b;
+}
+
+h3 {
+    margin: 22px 0 4px;
+    color: #12355b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 640px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+label {
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+input {
+    padding: 9px 10px;
+    border: 1px solid #b8c4d3;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input.ng-invalid.ng-touched,
+input.ng-invalid.ng-dirty {
+    border-color: #d1382f;
+}
+
+.dates-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.package-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 14px;
+    background: #f7f9fc;
+    border: 1px solid #d5deea;
+    border-radius: 8px;
+}
+
+.package-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field-error {
+    color: #9a2119;
+}
+
+.field-info {
+    color: #5c6b7a;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #1f6fd1;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #8aa9d1;
+    cursor: not-allowed;
+}
+
+.add-button {
+    align-self: flex-start;
+    background: #2e9d4f;
+}
+
+.remove-button {
+    margin-top: 0;
+    padding: 4px 10px;
+    background: #d1382f;
+}
+
+.message {
+    max-width: 640px;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+.message.success {
+    background: #dff3e5;
+    color: #1d6b39;
+}
+
+.message.error {
+    background: #fbe0de;
+    color: #9a2119;
+}
